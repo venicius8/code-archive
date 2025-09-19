@@ -35,6 +35,14 @@ export function Header() {
                 Contatos
               </Link>
             </li>
+            <li>
+              <Link
+                href="/backpage"
+                className="text-lg hover:text-blue-300 transition-colors duration-200 font-medium"
+              >
+                BackPage
+              </Link>
+            </li>
           </ul>
         </nav>
       </div>
