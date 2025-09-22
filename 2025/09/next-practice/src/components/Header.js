@@ -4,9 +4,9 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="bg-gray-800 text-white flex justify-between items-center py-4 px-8 fixed w-screen h-20">
+    <header className="bg-gray-800 text-white flex justify-between items-center py-4 px-8 fixed w-screen h-20 top-0">
       <div className="text-3xl font-bold">
-        <Link href={"#"}>Veni's</Link>
+        <Link href={"/"}>Veni's</Link>
       </div>
       <button className="md:hidden font-bold text-2xl absolute right-10">
         ☰
@@ -21,7 +21,7 @@ export default function Header() {
               <Link href={"/backapi"}>Backapi</Link>
             </li>
             <li>
-              <Link href={"/contact"}>Contato</Link>
+              <Link href={"/contacts"}>Contatos</Link>
             </li>
           </ul>
         </nav>
