@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>youBank</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Olá, <span id="userName-display"></span></h1>
+      <button onclick="showSettings()">⚙</button>
+    </header>
+    <main class="container-dashboard">
+      <div class="dashboard">
+        <h2>Seu saldo: R$<span id="balance">0</span></h2>
+        <div class="dashboard-options">
+          <button>Pix</button>
+          <button>Pagar</button>
+          <button>Investir</button>
+        </div>
+      </div>
+    </main>
+    <section class="settings hidden">
+      <h2>Configurações</h2>
+      <form>
+        <label for="userName-input">Nome de usuário: </label>
+        <input type="text" id="userName-input" />
+
+        <button type="button" onclick="saveSettings()">Salvar</button>
+      </form>
+    </section>
+    <div class="overlay-settings hidden" onclick="showSettings()"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

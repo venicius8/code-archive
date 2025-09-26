@@ -1,0 +1,86 @@
+body {
+  background: linear-gradient(to right, rgb(255, 255, 255), rgb(222, 237, 255));
+  width: auto;
+  height: 100dvh;
+}
+
+h1 {
+  text-align: start;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+header button {
+  font-size: 2rem;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  width: 3rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.container-dashboard {
+  display: flex;
+  justify-content: center;
+}
+
+.dashboard {
+  width: 80dvw;
+  height: 500px;
+  background-color: rgb(209, 209, 209);
+  max-width: 700px;
+  border-radius: 1.2rem;
+  padding: 0 20px;
+}
+
+.dashboard-options {
+  display: flex;
+  margin-top: 50px;
+  justify-content: space-between;
+  gap: 4px;
+}
+
+.dashboard-options button {
+  font-size: 1.5rem;
+  flex: 1;
+  height: 100px;
+  border: 1px solid rgb(158, 158, 158);
+  background-color: rgb(241, 241, 241);
+  border-radius: 1.5rem;
+  transition: 0.3s ease-in-out;
+}
+
+.dashboard-options button:hover {
+  background-color: rgb(255, 255, 255);
+}
+
+.hidden {
+  display: none;
+}
+
+.settings {
+  display: flex;
+  position: fixed;
+  background-color: rgb(184, 216, 255);
+  z-index: 10;
+  right: 0;
+  top: 0;
+  width: 500px;
+  height: 100dvh;
+}
+
+.overlay-settings {
+  display: flex;
+  position: fixed;
+  z-index: 8;
+  left: 0;
+  top: 0;
+  width: 100dvw;
+  height: 100dvh;
+  backdrop-filter: blur(5px);
+}
