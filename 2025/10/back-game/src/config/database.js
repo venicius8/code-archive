@@ -1,6 +1,6 @@
 const { neon } = require("@neondatabase/serverless");
 
-const initDatabase = async () => {
+const initializeDatabase = async () => {
   const databaseClient = neon(process.env.DATABASE_URL);
   try {
     await databaseClient`
@@ -19,4 +19,4 @@ const initDatabase = async () => {
   }
 };
 
-module.exports = { initDatabase };
+module.exports = { initializeDatabase };

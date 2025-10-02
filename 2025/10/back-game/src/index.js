@@ -1,7 +1,9 @@
 require("dotenv").config();
 const express = require("express");
-const { initDatabase } = require("./config/database");
+const { initializeDatabase } = require("./config/database");
 const playersRoutes = require("./routes/players");
+const PlayerService = require("./services/players");
+const createPlayerRoutes = require("./routes/players");
 
 /*
 app.put("/players/:id", async (req, res) => {
@@ -27,7 +29,10 @@ const startServer = async () => {
   app.use(express.json());
 
   try {
-    await initDatabase();
+    const databaseClient = await initializeDatabase();
+    const playerService = new PlayerService(databaseClient);
+    app.use("/player", createPlayerRoutes(playerService));
+
     app.listen(port, () => {
       console.log(`Servidor rodando em http://localhost:${port}`);
     });
