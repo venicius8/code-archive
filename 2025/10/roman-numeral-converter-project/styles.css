@@ -1,0 +1,40 @@
+body {
+  background-color: rgb(240, 240, 150);
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: start;
+  gap: 10px;
+}
+
+#number {
+  width: 70%;
+  max-width: 500px;
+  border: 1px solid gray;
+  font-size: 1.2rem;
+  height: 50px;
+  border-radius: 20px;
+}
+
+#convert-btn {
+  font-size: 1.2rem;
+  background-color: rgb(0, 255, 0);
+  border: 1px solid rgb(0, 200, 0);
+  height: 50px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+}
+
+#convert-btn:hover {
+  background-color: rgb(100, 255, 100);
+}
+
