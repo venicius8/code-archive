@@ -6,14 +6,14 @@ export default function MainPostContainer({ textContent, contents }) {
       <h2 className="text-3xl text-center">{textContent}</h2>
       {Array.isArray(contents) ? (
         contents.map((content) => (
-          <div key={content.id}>
-            <h3>{content.user}</h3>
-            <p>{content.content}</p>
-            <span>Likes: {content.likes}</span>
+          <div key={content.id} className="mt-6 bg-gray-200 p-4 rounded-2xl">
+            <h3 className="text-2xl font-bold">{content.user}</h3>
+            <p className="mb-5">{content.content}</p>
+            <span>{content.likes} curtidas</span>
           </div>
         ))
       ) : (
-        <p>Nenhum post disponível</p>
+        <p className="mt-6 text-center">Nenhum post disponível</p>
       )}
     </div>
   );
