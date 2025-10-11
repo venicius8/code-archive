@@ -1,0 +1,21 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Post {
+  id        Int      @id @default(autoincrement())
+  author    String   @db.VarChar(30)
+  content   String   @db.VarChar(255)
+  like      Int
+  created_at DateTime @default(now())
+}
+
+enum Role {
+  USER
+  ADMIN
+}

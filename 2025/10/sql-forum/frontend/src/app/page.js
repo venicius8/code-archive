@@ -11,10 +11,10 @@ export default async function Home() {
       <h1 className="text-4xl text-center mb-12">Bem vindo ao Forum SQL</h1>
 
       <MainPostContainer
-        textContent={"Os posts mais curtidos"}
+        textContent={"Veja alguns dos posts recentes"}
         contents={data}
       />
-      <MainPostContainer textContent={"Veja alguns dos posts recentes"} />
+      <MainPostContainer textContent={"Os posts mais curtidos"} />
     </main>
   );
 }

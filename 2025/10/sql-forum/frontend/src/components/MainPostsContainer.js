@@ -7,9 +7,10 @@ export default function MainPostContainer({ textContent, contents }) {
       {Array.isArray(contents) ? (
         contents.map((content) => (
           <div key={content.id} className="mt-6 bg-gray-200 p-4 rounded-2xl">
-            <h3 className="text-2xl font-bold">{content.user}</h3>
+            <h3 className="text-2xl font-bold">{content.author}</h3>
             <p className="mb-5">{content.content}</p>
-            <span>{content.likes} curtidas</span>
+            <div className="w-2/3 h-[1px] bg-gray-400 mt-10"></div>
+            <span>{content.like} curtidas</span>
           </div>
         ))
       ) : (
