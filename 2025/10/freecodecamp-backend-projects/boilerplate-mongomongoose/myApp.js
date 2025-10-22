@@ -27,21 +27,35 @@ const createAndSavePerson = (done) => {
     age: "22",
     favoriteFoods: ["Pizza", "Sushi"],
   });
+  if (err) return done(err);
+
   person.save((err, data) => {
     done(null, data);
   });
 };
 
 const createManyPeople = (arrayOfPeople, done) => {
-  done(null /*, data*/);
+  Person.create(arrayOfPeople, (err, data) => {
+    if (err) return done(err);
+
+    done(null, data);
+  });
 };
 
 const findPeopleByName = (personName, done) => {
-  done(null /*, data*/);
+  Person.find({ name: personName }, (err, data) => {
+    if (err) return done(err);
+
+    done(null, data);
+  });
 };
 
 const findOneByFood = (food, done) => {
-  done(null /*, data*/);
+  Person.findOne({ favoriteFoods: food }, (err, data) => {
+    if (err) return done(err);
+
+    done(null, data);
+  });
 };
 
 const findPersonById = (personId, done) => {
